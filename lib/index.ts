@@ -1,3 +1,3 @@
-import MyButton from './componenets/Button';
+import MXButton from './componenets/Button';
 
-export { MyButton };
+export { MXButton };
