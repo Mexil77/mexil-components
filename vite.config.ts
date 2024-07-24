@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="vitest" />
 import path, { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { globSync } from 'glob'
@@ -12,7 +13,7 @@ export default defineConfig({
   plugins: [
     react(),
     libInjectCss(),
-    dts({ exclude: ['**/*.stories.tsx'] })
+    dts({ exclude: ['**/*.stories.tsx', 'src/test', '**/*.test.tsx'] })
   ],
   build: {
     lib: {
@@ -44,6 +45,16 @@ export default defineConfig({
           'react/jsx-runtime': 'react/jsx-runtime',
         },
       },
+    },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.ts',
+    css: true,
+    coverage: {
+      include: ['src/components'],
+      exclude: ['**/*.stories.tsx'],
     },
   },
 })
