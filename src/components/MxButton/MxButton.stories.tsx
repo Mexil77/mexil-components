@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
-import { MyButton } from './'
+import { MxButton } from '.'
 
 const meta = {
-  title: 'Components/MyButton',
-  component: MyButton,
+  title: 'Components/MxButton',
+  component: MxButton,
   parameters: {
     layout: 'centered',
   },
@@ -14,7 +14,7 @@ const meta = {
     label: 'Button',
     onClick: fn(),
   },
-} satisfies Meta<typeof MyButton>
+} satisfies Meta<typeof MxButton>
 
 export default meta
 type Story = StoryObj<typeof meta>

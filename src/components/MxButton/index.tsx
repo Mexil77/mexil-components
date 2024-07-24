@@ -7,7 +7,7 @@ interface ComponentProps extends React.ComponentProps<'button'> {
   label: string
 }
 
-export function MyButton({ primary = false, size = 'medium', label, ...props }: ComponentProps) {
+export function MxButton({ primary = false, size = 'medium', label, ...props }: ComponentProps) {
   const style = clsx(styles.button, {
     [styles['button--primary']]: primary,
     [styles[`button--${size}`]]: size,

@@ -6,7 +6,7 @@ interface ComponentProps extends React.ComponentProps<'h1'> {
   title: string
 }
 
-export function MyTitle({ primary = false, title, ...props }: ComponentProps) {
+export function MxTitle({ primary = false, title, ...props }: ComponentProps) {
   const style = clsx(styles.title, {
     [styles['title--primary']]: primary,
   })

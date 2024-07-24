@@ -25,3 +25,8 @@ dist-ssr
 package-lock.json
 
 *storybook.log
+
+# Generate files on build to fix
+tsconfig.node.tsbuildinfo
+vite.config.d.ts
+vite.config.js

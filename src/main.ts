@@ -1,2 +1,2 @@
-export { MyButton } from './components/MyButton/'
-export { MyTitle } from './components/MyTitle/'
+export { MxButton } from './components/MxButton'
+export { MxTitle } from './components/MxTitle'
