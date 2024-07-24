@@ -1,16 +1,24 @@
-import styles from './styles.module.css'
+import styles from './styles.module.scss'
 import clsx from 'clsx'
 
 interface ComponentProps extends React.ComponentProps<'button'> {
-  primary?: boolean
+  disable?: boolean
   size?: 'small' | 'medium' | 'large'
   label: string
+  variant?: 'primary' | 'secondary' | 'warning' | 'alert'
 }
 
-export function MxButton({ primary = false, size = 'medium', label, ...props }: ComponentProps) {
-  const style = clsx(styles.button, {
-    [styles['button--primary']]: primary,
-    [styles[`button--${size}`]]: size,
+export function MxButton({
+  disable = false,
+  size = 'medium',
+  label,
+  variant = 'primary',
+  ...props
+}: ComponentProps) {
+  const style = clsx(styles.mxbutton, {
+    [styles['mxbutton--disable']]: disable,
+    [styles[`mxbutton--${size}`]]: size,
+    [styles[`mxbutton--${variant}`]]: variant,
   })
 
   return (

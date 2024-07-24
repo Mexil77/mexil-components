@@ -19,15 +19,15 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const Disable: Story = {
   args: {
-    primary: true,
+    disable: true,
   },
 }
 
-export const Secondary: Story = {
+export const Enable: Story = {
   args: {
-    primary: false,
+    disable: false,
   },
 }
 
@@ -40,5 +40,26 @@ export const Large: Story = {
 export const Small: Story = {
   args: {
     size: 'small',
+  },
+}
+
+export const Primary: Story = {
+  args: {
+    variant: 'primary',
+  },
+}
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+  },
+}
+export const Warning: Story = {
+  args: {
+    variant: 'warning',
+  },
+}
+export const Alert: Story = {
+  args: {
+    variant: 'alert',
   },
 }

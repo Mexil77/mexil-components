@@ -1,7 +1,7 @@
 {
   "name": "mexil-components",
   "private": false,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
@@ -55,6 +55,7 @@
     "glob": "^11.0.0",
     "jsdom": "^24.1.1",
     "prettier": "^3.3.3",
+    "sass": "^1.77.8",
     "storybook": "^8.2.5",
     "stylelint": "^16.7.0",
     "stylelint-config-standard": "^36.0.1",
