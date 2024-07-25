@@ -19,15 +19,15 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Disable: Story = {
-  args: {
-    disable: true,
-  },
-}
-
 export const Enable: Story = {
   args: {
     disable: false,
+  },
+}
+
+export const Disable: Story = {
+  args: {
+    disable: true,
   },
 }
 
