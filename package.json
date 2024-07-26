@@ -1,7 +1,7 @@
 {
-  "name": "mexil-components",
+  "name": "comoponents-template",
   "private": false,
-  "version": "0.1.5",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
