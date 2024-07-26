@@ -14,9 +14,7 @@ The project work whit many tecnologies to help the develop and test the componen
 - [vitest](https://vitest.dev/)
 - [jest](https://jestjs.io/) (integrated in vitest)
 
-## Confing Repo
-
-### Clone repo
+## Clone repo
 
 I can understand that you don't want to have the history of this repository in your project, as sad as that sounds, so let's clone it and initialize a new one as a first step
 
@@ -36,20 +34,14 @@ But if you don understand what ssh is, its a good idea to know it.
 - [ssh github windows config](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/GitHub-SSH-Windows-Example)
 - [ssh github macOS config](https://gist.github.com/DakotaLMartinez/baa81e7f00fa8eb68d9dbcab69f5b762)
 
-Now the next steps is for prepare the new empty repository
+Now change to componenetTemplate
 
 ```bash
 cd mexil-components
 git checkout componenetTemplate
-rm -rf .git
-git init
-git add .
-git commit -m "first commit"
 ```
 
-> Its important change the branch to **componenetTemplate** before delete .git file, otherwise you coudnt access to all code
-
-Now you have your new repo in local we need to sincronice whit your repo in producction, devops or personal repo.
+Now if you whant to sincronice whit your repo in producction, devops or personal repo.
 
 ### Link remote repo
 
@@ -65,7 +57,7 @@ An example of that:
 git remote add origin https://github.com/eslint/eslint.git
 ```
 
-> In this example i used origin in name remote tag because is the defauld tag when you clone a repo, but feel free to change to what evere you want to write, for example **workRepo**, in that case the commants to pull or push changed to for example
+> In this example i used **origin** in _name remote tag_ because is the defauld tag when you clone a repo, but feel free to change to what every you want to write, for example **workRepo**, in that case the commants to pull or push changed to for example
 >
 > - _git push **workRepo** master_
 
@@ -137,7 +129,7 @@ git push origin master:main
 
 ## Test default configuration
 
-Firts of all you need to install all de dependencies whit
+Firts of all you need to install all de dependencies with
 
 ```bash
 npm i
@@ -147,14 +139,14 @@ After that we could test all the scripts
 
 ### Scripts
 
-We have mane scripts to format code, but the importants are
+We have many scripts to format code and more things, but the importants are
 
 - storybook
 - test
 - coverage
 - build
 
-All this scrits run whit
+All this scripts run with
 
 ```bash
 npm run [name script]
@@ -172,9 +164,9 @@ Lets describe each one
 
   This script will run the storybook library open a browser tab runing on localhost:6006, that show you all the information about the components, you can check and modify this information in the \*.stories.tsx file stored in the directory of each component, the directory of each component are in _src/components_
 
-  Its important to know you are not modifing the component just the story file, that the storybook use to dosplay how the component works in real time, modifing the props you pass in the storybook browser tab.
+  Its important to know you are not modifing the component just the story file, that the storybook use to display how the component works in real time, modifing the props you pass in the storybook browser tab.
 
-  If you whant to modify the component, you need to modify the index.tsx in the same directory and aoutomaticly you will see the change in the browser.
+  If you whant to modify the component, you need to modify the index.tsx in the same directory and automatically you will see the change in the browser.
 
 - **test**
 
@@ -182,9 +174,9 @@ Lets describe each one
 
 - **coverage**
 
-  If you want something more classic this script will run the clasic coverage with jest and generate the coverage directore where you can see the index.html where is the graphic analitic.
+  If you want something more classic this script will run the clasic coverage with jest and generate the coverage directory who store the index.html where is the graphic analitic.
 
-  You can run the next comand to open an a browser tab whit the information mentioned
+  You can run the next comand to open an a browser tab with the information mentioned
 
   ```bash
   open coverage/index.html
@@ -198,12 +190,68 @@ Lets describe each one
 
 ### Create new component
 
-To create a new component just need to create a new folder in components directory
+To create a new component named _NewComponent_ for example just need to create a new folder in components directory with the basic structure of files:
+
+- index.tsx
+- NewComponent.stories.tsx
+- NewComponent.test.tsx
+- styles.module.scss
 
 ```bash
-📂 - src
+  📂 src
+  ├─ 📂 components
+  │  ├─ 📂 MxButton
++ │  └─ 📂 NewComponent
++ │     ├─ 📄index.tsx
++ │     ├─ 📄NewComponent.stories.tsx
++ │     ├─ 📄NewComponent.test.tsx
++ │     └─ 📄styles.module.scss
+  ├─ 📂 globalStyles
+  ├─ 📄main.ts
 ```
 
-## License
+> If its true the only files necesary to make a new component are the **index.tsx** and **styles.module.scss**, could be a good practice make the test and present work for the component with the other files to help other developers to understand the project.
 
-[MIT](https://choosealicense.com/licenses/mit/)
+- To configure the stories for the storybook you can check the [doc of Storybook](https://storybook.js.org/docs/get-started/whats-a-story).
+
+- To make the unit test in jest you could check the [doc of Jest](https://jestjs.io/es-ES/docs/getting-started) and can check [doc of vitest](https://vitest.dev/guide/) to help if you whant to use the softwete to test.
+
+After finish your component, aply the styles, make the configutarion of the presentation in storybook and made the unit test, you are ready to deploy.
+
+## Build
+
+To build we will use the script mentionated in the **scripts** part, to generated the dist folder, that will be the directory we upload to install after in any proyect.
+
+```bash
+npm run build
+```
+
+After the process finish, you can check all the components are in the dist folder ready to export, so just left publish.
+
+If you need and special configuration because is an private sistem of packages, you will need to add that configuration and the script to run that configuration.
+
+But if you whant to publish your package publicly, just run the next comand
+
+```bash
+npm publis
+```
+
+This comand will try to publish the package in [npm](https://www.npmjs.com/) publicly to the comunity.
+
+> Its **important** remark you will need an **npm account** and logued in to publish
+
+If all its ok, you will be the name follow the version of the package that match whit the name and version in the **package.json**.
+
+If you want to change the name or update the version of the package just have to modify the name or update the version in the **package.json**
+
+package.json
+
+```json
+{
+  "name": "comoponents-template", ⬅️
+  "private": false,
+  "version": "0.0.1",             ⬅️
+  "type": "module",
+...
+}
+```
