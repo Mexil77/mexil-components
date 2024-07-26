@@ -32,11 +32,11 @@ But if you don understand what ssh is, it's a good idea to know it.
 - [ssh github windows config](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/GitHub-SSH-Windows-Example)
 - [ssh github macOS config](https://gist.github.com/DakotaLMartinez/baa81e7f00fa8eb68d9dbcab69f5b762)
 
-Now change to componenetTemplate
+Now change to componentTemplate
 
 ```bash
 cd mexil-components
-git checkout componenetTemplate
+git checkout componentTemplate
 ```
 
 Now if you want to synchronize with your repo in production, DevOps or personal repo.
