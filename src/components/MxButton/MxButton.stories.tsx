@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
 import { MxButton } from '.'
+import { VariantsArrKeys } from '../../enums'
 
 const meta = {
   title: 'Components/MxButton',
@@ -14,6 +15,17 @@ const meta = {
     label: 'Button',
     onClick: fn(),
   },
+  argTypes: {
+    disable: Boolean,
+    label: String,
+    size: {
+      options: ['small', 'medium', 'large'],
+    },
+    variant: {
+      options: VariantsArrKeys,
+    },
+
+  }
 } satisfies Meta<typeof MxButton>
 
 export default meta
