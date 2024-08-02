@@ -4,39 +4,121 @@
   --bg-color: none;
   background-color: var(--bg-color);
   border-radius: 6px;
-  border: 2px solid $color-white;
-  color: $color-white;
+  color: $color-gray-20;
   cursor: pointer;
+  border: 0;
 
-  &:hover {
-    border: 2px solid $color-dark;
-    color: $color-dark;
-    background-color: $color-white;
+  &--primary {
+    background-color: $color-primary;
+  
+    &:hover{
+      background-color: $color-primary-hover;
+    }
+    &:active{
+      background-color: $color-primary;
+    }
   }
-}
+  &--secondary {
+    background-color: $color-secondary;
+    
+    &:hover{
+      background-color: $color-secondary-hover;
+    }
+    &:active{
+      background-color: $color-secondary;
+    }
+  }
+  &--warning {
+    background-color: $color-warning;
+    color: $color-primary;
+    
+    &:hover{
+      background-color: $color-warning-hover;
+    }
+    &:active{
+      background-color: $color-warning;
+    }
+  }
+  &--alert {
+    color: $color-primary;
+    background-color: $color-alert;
 
-.mxbutton--primary {
-  background-color: $color-primary;
-}
-.mxbutton--secondary {
-  border: 2px solid $color-dark;
-  color: $color-dark;
-  background-color: $color-gray-white;
-}
-.mxbutton--warning {
-  background-color: $color-warning;
-}
-.mxbutton--alert {
-  border: 2px solid $color-dark;
-  color: $color-dark;
-  background-color: $color-alert;
+    &:hover{
+      background-color: $color-alert-hover;
+    }
+    &:active{
+      background-color: $color-alert;
+    }
+  }
+
+// Outlined
+  &--outline {
+    background-color: transparent;
+    
+    &-primary{
+      border: 1px solid $color-primary;
+      color: $color-primary;
+
+      &:hover{
+        background-color: $color-primary;
+        color: $color-gray-20;
+      }
+      &:active{
+        background-color: transparent;
+        border: 1px solid $color-primary;
+        color: $color-primary;
+      }
+    }
+    &-secondary{
+      border: 1px solid $color-secondary;
+      color: $color-secondary;
+
+      &:hover{
+        background-color: $color-secondary;
+        color: $color-gray-20;
+      }
+      &:active{
+        background-color: transparent;
+        border: 1px solid $color-secondary;
+        color: $color-secondary;
+      }
+    }
+    &-warning{
+      border: 1px solid $color-warning;
+      color: $color-warning;
+
+      &:hover{
+        background-color: $color-warning;
+        color: $color-gray-20;
+      }
+      &:active{
+        background-color: transparent;
+        border: 1px solid $color-warning;
+        color: $color-warning;
+      }
+    }
+    &-alert{
+      border: 1px solid $color-alert;
+      color: $color-alert;
+
+      &:hover{
+        background-color: $color-alert;
+        color: $color-gray-20;
+      }
+      &:active{
+        background-color: transparent;
+        border: 1px solid $color-alert;
+        color: $color-alert;
+      }
+    }
+  }
 }
 
 .mxbutton--disable,
 .mxbutton--disable:hover {
-  background-color: $color-gray-white;
-  color: $color-gray-dark;
-  border: 2px solid $color-gray-dark;
+  background-color: $color-gray-20;
+  border: 1px solid $color-gray-60;
+  color: $color-gray-100;
   cursor: not-allowed;
 }
 

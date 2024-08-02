@@ -1,3 +1,4 @@
+import { Variants } from '../../enums'
 import styles from './styles.module.scss'
 import clsx from 'clsx'
 
@@ -5,7 +6,7 @@ interface ComponentProps extends React.ComponentProps<'button'> {
   disable?: boolean
   size?: 'small' | 'medium' | 'large'
   label: string
-  variant?: 'primary' | 'secondary' | 'warning' | 'alert'
+  variant?: `${Variants}`
 }
 
 export function MxButton({

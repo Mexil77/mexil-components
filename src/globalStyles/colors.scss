@@ -1,10 +1,37 @@
-$color-primary: #7776b3;
-$color-secondary: #9b86bd;
-$color-dark: #5a639c;
-$color-white: #e2bbe9;
+// global values
+$color-white: #fbf6f0;
+$color-black: #000;
 
-$color-gray-white: #afafaf;
-$color-gray-dark: #555;
-
-$color-warning: #cc3300;
+// principal values
+$color-primary: #34143b;
+$color-primary-hover: #471e50;
+$color-secondary: #132345;
+$color-secondary-hover: #1b2f5a;
+$color-success: #047a50;
+$color-success-hover: #108d61;
+$color-warning: #e70e02;
+$color-warning-hover: #be0d03;
 $color-alert: #ffcc00;
+$color-alert-hover: #eebf04;
+
+// Color gradients
+// Pruple
+$color-purple-100: #240046;
+$color-purple-80: #3c096c;
+$color-purple-60: #5a189a;
+$color-purple-40: #7b2cbf;
+$color-purple-20: #9d4edd;
+
+// Orange
+$color-orange-100: #ff6d00;
+$color-orange-80: #ff7900;
+$color-orange-60: #ff8500;
+$color-orange-40: #ff9100;
+$color-orange-20: #ff9e00;
+
+// Gray
+$color-gray-100: #666;
+$color-gray-80: #888;
+$color-gray-60: #aaa;
+$color-gray-40: #bbb;
+$color-gray-20: #ddd;
