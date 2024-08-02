@@ -9,23 +9,42 @@ const meta = {
   component: MxButton,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        story: 'Another description on the story, overriding the comments',
+      },
+    },
   },
   tags: ['autodocs'],
   args: {
     label: 'Button',
-    onClick: fn(),
+    onClick: fn(() => {
+      alert('hola')
+    }),
   },
   argTypes: {
     disable: Boolean,
     label: String,
     size: {
       options: ['small', 'medium', 'large'],
+      table: {
+        type: { summary: 'string', detail: 'small | medium | large' },
+      },
     },
     variant: {
       options: VariantsArrKeys,
+      control: 'radio',
+      table: {
+        type: {
+          summary: 'string',
+          detail: VariantsArrKeys.reduce(
+            (acc: string, variantKey: string) => `${acc}${variantKey} |\n`,
+            ''
+          ),
+        },
+      },
     },
-
-  }
+  },
 } satisfies Meta<typeof MxButton>
 
 export default meta
