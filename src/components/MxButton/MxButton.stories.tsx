@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
 import { MxButton } from '.'
-import { VariantsArrKeys } from '../../enums'
+import { SizesArrKeys, VariantsArrKeys } from '../../enums'
 
 const meta = {
   title: 'Components/MxButton',
@@ -18,17 +18,22 @@ const meta = {
   tags: ['autodocs'],
   args: {
     label: 'Button',
-    onClick: fn(() => {
-      alert('hola')
-    }),
+    onClick: fn(),
   },
   argTypes: {
     disable: Boolean,
     label: String,
     size: {
-      options: ['small', 'medium', 'large'],
+      options: SizesArrKeys,
+      control: 'radio',
       table: {
-        type: { summary: 'string', detail: 'small | medium | large' },
+        type: {
+          summary: 'string',
+          detail: SizesArrKeys.reduce(
+            (acc: string, sizeKey: string) => `${acc}${sizeKey} \t|\n`,
+            ''
+          ),
+        },
       },
     },
     variant: {

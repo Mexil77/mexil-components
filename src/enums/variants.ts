@@ -9,7 +9,7 @@ export enum Variants {
   OUTLINE_ALERT = 'outline-alert',
 }
 
-export type VariantKeys = keyof typeof Variants;
+type VariantKeys = keyof typeof Variants;
 
 export const VariantsArrKeys = Object.keys(Variants).map((variant: string) => Variants[variant as VariantKeys]);
 
