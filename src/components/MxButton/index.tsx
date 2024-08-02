@@ -1,10 +1,10 @@
-import { Variants } from '../../enums'
+import { Sizes, Variants } from '../../enums'
 import styles from './styles.module.scss'
 import clsx from 'clsx'
 
 interface ComponentProps extends React.ComponentProps<'button'> {
   disable?: boolean
-  size?: 'small' | 'medium' | 'large'
+  size?: `${Sizes}`
   label: string
   variant?: `${Variants}`
 }
