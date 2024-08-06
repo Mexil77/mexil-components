@@ -10,32 +10,32 @@
 
   &--primary {
     background-color: $color-primary;
-  
-    &:hover{
+
+    &:hover {
       background-color: $color-primary-hover;
     }
-    &:active{
+    &:active {
       background-color: $color-primary;
     }
   }
   &--secondary {
     background-color: $color-secondary;
-    
-    &:hover{
+
+    &:hover {
       background-color: $color-secondary-hover;
     }
-    &:active{
+    &:active {
       background-color: $color-secondary;
     }
   }
   &--warning {
     background-color: $color-warning;
     color: $color-primary;
-    
-    &:hover{
+
+    &:hover {
       background-color: $color-warning-hover;
     }
-    &:active{
+    &:active {
       background-color: $color-warning;
     }
   }
@@ -43,69 +43,69 @@
     color: $color-primary;
     background-color: $color-alert;
 
-    &:hover{
+    &:hover {
       background-color: $color-alert-hover;
     }
-    &:active{
+    &:active {
       background-color: $color-alert;
     }
   }
 
-// Outlined
+  // Outlined
   &--outline {
     background-color: transparent;
-    
-    &-primary{
+
+    &-primary {
       border: 1px solid $color-primary;
       color: $color-primary;
 
-      &:hover{
+      &:hover {
         background-color: $color-primary;
         color: $color-gray-20;
       }
-      &:active{
+      &:active {
         background-color: transparent;
         border: 1px solid $color-primary;
         color: $color-primary;
       }
     }
-    &-secondary{
+    &-secondary {
       border: 1px solid $color-secondary;
       color: $color-secondary;
 
-      &:hover{
+      &:hover {
         background-color: $color-secondary;
         color: $color-gray-20;
       }
-      &:active{
+      &:active {
         background-color: transparent;
         border: 1px solid $color-secondary;
         color: $color-secondary;
       }
     }
-    &-warning{
+    &-warning {
       border: 1px solid $color-warning;
       color: $color-warning;
 
-      &:hover{
+      &:hover {
         background-color: $color-warning;
         color: $color-gray-20;
       }
-      &:active{
+      &:active {
         background-color: transparent;
         border: 1px solid $color-warning;
         color: $color-warning;
       }
     }
-    &-alert{
+    &-alert {
       border: 1px solid $color-alert;
       color: $color-alert;
 
-      &:hover{
+      &:hover {
         background-color: $color-alert;
         color: $color-gray-20;
       }
-      &:active{
+      &:active {
         background-color: transparent;
         border: 1px solid $color-alert;
         color: $color-alert;
@@ -124,15 +124,15 @@
 
 .mxbutton--small {
   font-size: 1rem;
-  padding: 0.4rem 0.6rem;
+  padding: 0.5rem 0.7rem;
 }
 
 .mxbutton--medium {
   font-size: 1.2rem;
-  padding: 0.6rem 0.8rem;
+  padding: 0.7rem 0.9rem;
 }
 
 .mxbutton--large {
   font-size: 1.4rem;
-  padding: 0.8rem 1rem;
+  padding: 0.9rem 1.1rem;
 }

@@ -1,0 +1,52 @@
+@import '../../globalStyles/colors.scss';
+
+input {
+  &.mxinput {
+    border-radius: 13px;
+    padding: 8px;
+    font-weight: bold;
+    color: $color-primary;
+
+    &::placeholder {
+      font-weight: bold;
+      font-style: italic;
+      opacity: 0.5;
+    }
+
+    &:active {
+      border: 2px solid $color-primary;
+    }
+
+    &:focus {
+      outline: none;
+    }
+    &--normal {
+      border: 2px solid $color-gray-60;
+
+      &:focus {
+        border: 3px solid $color-primary;
+      }
+    }
+    &--success {
+      border: 2px solid $color-success-hover;
+
+      &:focus {
+        border: 3px solid $color-success;
+      }
+    }
+    &--warning {
+      border: 2px solid $color-warning-hover;
+
+      &:focus {
+        border: 3px solid $color-warning;
+      }
+    }
+    &--alert {
+      border: 2px solid $color-alert-hover;
+
+      &:focus {
+        border: 3px solid $color-alert;
+      }
+    }
+  }
+}
