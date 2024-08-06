@@ -14,7 +14,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest --ui",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "chromatic": "chromatic"
   },
   "module": "./dist/main.js",
   "exports": "./dist/main.js",
