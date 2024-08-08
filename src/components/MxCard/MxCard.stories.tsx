@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import MxCard from '.'
+import { MxCard } from '.'
 import { SizesArrKeys } from '../../enums'
 import { MxCardHeader } from './MxCardHeader'
 
