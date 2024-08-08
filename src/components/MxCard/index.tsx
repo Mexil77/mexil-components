@@ -12,7 +12,7 @@ type MxCardProps = {
   loadLines?: number
 }
 
-export default function MxCard({
+export function MxCard({
   loading = false,
   padding = true,
   children,

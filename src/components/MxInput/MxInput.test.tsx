@@ -7,9 +7,4 @@ describe('Mxinput test:', () => {
   it('shoult render component', () => {
     render(<MxInput />)
   })
-
-  // it('shoult be disabled', () => {
-  //   render(<MxInput disable={true} />)
-  //   expect(screen.getByRole('input'))
-  // })
 })
