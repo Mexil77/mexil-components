@@ -1,9 +1,10 @@
 @import '../../globalStyles/colors.scss';
+@import '../../globalStyles/sizes.scss';
 
 .mxbutton {
   --bg-color: none;
   background-color: var(--bg-color);
-  border-radius: 6px;
+  border-radius: $border-radius;
   color: $color-gray-20;
   cursor: pointer;
   border: 0;

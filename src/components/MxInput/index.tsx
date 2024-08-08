@@ -1,12 +1,13 @@
 import clsx from 'clsx'
 import styles from './styles.module.scss'
 import React from 'react'
+import { InputTypes, States } from '../../enums'
 
 interface ComponentProps extends React.ComponentProps<'input'> {
   disabled?: boolean
   placeholder?: string
-  type?: 'text' | 'number' | 'password' | 'email' | 'tel' | 'serch'
-  state?: 'success' | 'warning' | 'alert' | 'normal'
+  type?: `${InputTypes}`
+  state?: `${States}`
 }
 
 export function MxInput({

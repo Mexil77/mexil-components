@@ -1,0 +1,72 @@
+@import '../../globalStyles/colors.scss';
+@import '../../globalStyles/sizes.scss';
+
+.mxcard {
+  border: 1px solid $color-primary;
+  border-radius: $border-radius;
+  min-height: 3rem;
+
+  &--small {
+    min-width: 5rem;
+  }
+  &--medium {
+    min-width: 15rem;
+  }
+  &--large {
+    min-width: 25rem;
+  }
+}
+
+.mxcard_header {
+  border-radius: $border-radius $border-radius 0 0;
+  min-height: 1.5rem;
+  background-color: $color-purple-80;
+  color: $color-white;
+  font-weight: bolder;
+  margin: 0;
+
+  &--padding {
+    padding: $padding-small;
+  }
+}
+
+.mxcard_body {
+  border-radius: 0 0 $border-radius $border-radius;
+  margin: 0;
+  display: flex;
+  min-height: 5rem;
+  background-color: $color-white;
+
+  &--padding {
+    padding: $padding-small;
+  }
+}
+
+.loader_container {
+  padding: $padding-small;
+}
+
+.loader_line {
+  width: 120px;
+  height: 20px;
+  border-radius: $border-radius;
+  background: linear-gradient(90deg, #0001 33%, #0005 50%, #0001 66%) #f2f2f2;
+  background-size: 300% 100%;
+  animation: l1 1s infinite linear;
+  margin: 1rem 1rem 0;
+
+  &--small {
+    min-width: 5rem;
+  }
+  &--medium {
+    min-width: 15rem;
+  }
+  &--large {
+    min-width: 25rem;
+  }
+}
+@keyframes l1 {
+  0% {
+    background-position: right;
+  }
+}

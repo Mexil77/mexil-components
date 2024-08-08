@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { MxInput } from '.'
+import { InputTypesArrKeys, StatesArrKeys } from '../../enums'
 
 const meta = {
   title: 'Components/MxInput',
@@ -16,6 +17,32 @@ const meta = {
   args: {},
   argTypes: {
     disabled: Boolean,
+    type: {
+      options: InputTypesArrKeys,
+      control: 'radio',
+      table: {
+        type: {
+          summary: 'string',
+          detail: InputTypesArrKeys.reduce(
+            (acc: string, sizeKey: string) => `${acc}${sizeKey} \t|\n`,
+            ''
+          ),
+        },
+      },
+    },
+    state: {
+      options: StatesArrKeys,
+      control: 'radio',
+      table: {
+        type: {
+          summary: 'string',
+          detail: StatesArrKeys.reduce(
+            (acc: string, sizeKey: string) => `${acc}${sizeKey} \t|\n`,
+            ''
+          ),
+        },
+      },
+    },
   },
 } satisfies Meta<typeof MxInput>
 
