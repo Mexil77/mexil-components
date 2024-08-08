@@ -57,3 +57,5 @@ export function MxCard({
     </div>
   )
 }
+
+export { MxCardHeader } from './MxCardHeader'
