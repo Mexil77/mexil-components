@@ -67,12 +67,28 @@ const meta = {
         <div
           style={{
             backgroundColor: '#fff',
+            border: '1px solid #000',
+            borderRadius: '10px',
             width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            padding: '5px',
           }}
         >
-          <h2>Body title</h2>
-          <p>Some description</p>
-          <p>Some date: 2024/08/08</p>
+          <div
+            className='header'
+            style={{
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'baseline',
+            }}
+          >
+            <h2>Body title</h2>
+            <p>24/08</p>
+          </div>
+          <p>Lorem ipsum dolor, sit amet</p>
         </div>,
       ],
       control: 'check',
@@ -86,14 +102,20 @@ const meta = {
       },
     },
     header: {
-      options: [<MxCardHeader label='Cart Title' />],
+      options: [
+        <MxCardHeader>
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <h1>#1</h1>
+          </div>
+        </MxCardHeader>,
+      ],
       control: 'check',
       description:
         ' MxCardHeader, check reference of that component in the description. Check bellow to see the jsx has render in control example',
       table: {
         type: {
           summary: 'MxCardHeader',
-          detail: "<MxCardHeader label='Cart Title' />",
+          detail: '<MxCardHeader >',
         },
       },
     },
@@ -106,7 +128,13 @@ type Story = StoryObj<typeof meta>
 
 export const Complete: Story = {
   args: {
-    header: [<MxCardHeader label='Cart Title' />],
+    header: [
+      <MxCardHeader>
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <h1>#1</h1>
+        </div>
+      </MxCardHeader>,
+    ],
   },
 }
 
@@ -152,6 +180,10 @@ export const LargerContent: Story = {
         </p>
       </div>
     ),
-    header: <MxCardHeader label='Title' />,
+    header: (
+      <MxCardHeader>
+        <h1>Title</h1>
+      </MxCardHeader>
+    ),
   },
 }

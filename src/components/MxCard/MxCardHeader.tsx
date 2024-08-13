@@ -1,9 +1,11 @@
+import { ReactNode } from 'react'
+
 export type MxCardHeaderProps = {
-  label: string
+  children?: ReactNode
 }
 
-export const MxCardHeader = ({ label }: MxCardHeaderProps) => {
-  return <h1>{label}</h1>
+export const MxCardHeader = ({ children }: MxCardHeaderProps) => {
+  return children
 }
 
 MxCardHeader.displayName = 'MxCardHeader'
