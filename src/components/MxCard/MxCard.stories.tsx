@@ -2,10 +2,12 @@ import { Meta, StoryObj } from '@storybook/react'
 import { MxCard } from '.'
 import { SizesArrKeys } from '../../enums'
 import { MxCardHeader } from './MxCardHeader'
+import { ComponentType } from 'react'
 
 const meta = {
   title: 'Components/MxCard',
   component: MxCard,
+  subcomponents: { MxCardHeader: MxCardHeader as ComponentType<unknown> },
   parameters: {
     layout: 'centered',
     docs: {
@@ -15,7 +17,36 @@ const meta = {
     },
   },
   tags: ['autodocs'],
-  args: {},
+  args: {
+    children: [
+      <div
+        style={{
+          backgroundColor: '#fff',
+          border: '1px solid #000',
+          borderRadius: '10px',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          padding: '5px',
+        }}
+      >
+        <div
+          className='header'
+          style={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'baseline',
+          }}
+        >
+          <h2>Body title</h2>
+          <p>24/08</p>
+        </div>
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>,
+    ],
+  },
   argTypes: {
     loading: Boolean,
     size: {
@@ -58,10 +89,10 @@ const meta = {
       options: [<MxCardHeader label='Cart Title' />],
       control: 'check',
       description:
-        'Any React Node of type MxCardHeader, cherck reference of that component in the description. Check bellow to see the jsx has render in control example',
+        ' MxCardHeader, check reference of that component in the description. Check bellow to see the jsx has render in control example',
       table: {
         type: {
-          summary: 'ReactNode',
+          summary: 'MxCardHeader',
           detail: "<MxCardHeader label='Cart Title' />",
         },
       },
@@ -73,8 +104,10 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Basic: Story = {
-  args: {},
+export const Complete: Story = {
+  args: {
+    header: [<MxCardHeader label='Cart Title' />],
+  },
 }
 
 export const Loading: Story = {
@@ -83,7 +116,11 @@ export const Loading: Story = {
   },
 }
 
-export const BodyChildren: Story = {
+export const NoHeader: Story = {
+  args: {},
+}
+
+export const LargerContent: Story = {
   args: {
     children: (
       <div>
@@ -115,6 +152,6 @@ export const BodyChildren: Story = {
         </p>
       </div>
     ),
-    header: <MxCardHeader label='hola' />,
+    header: <MxCardHeader label='Title' />,
   },
 }
