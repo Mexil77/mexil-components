@@ -10,7 +10,7 @@ describe('Mxcard test:', () => {
   })
 
   it('shoult render component whit header', () => {
-    render(<MxCard header={<MxCardHeader label='header' />} />)
+    render(<MxCard header={<MxCardHeader />} />)
   })
 
   it('shoult render component loadeing', () => {
