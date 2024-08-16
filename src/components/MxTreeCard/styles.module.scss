@@ -1,0 +1,64 @@
+@import '../../globalStyles/colors.scss';
+@import '../../globalStyles/sizes.scss';
+
+.mxtreecard {
+  max-width: 40rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-purple-80;
+  border-radius: $border-radius;
+  color: $color-purple-80;
+
+  &__categories {
+    display: flex;
+    height: 2rem;
+    width: calc(100% - 2rem);
+    overflow: hidden;
+
+    &__category {
+      display: flex;
+      align-items: center;
+      min-width: 10rem;
+      color: $color-black;
+
+      &__active {
+        border: 2px solid $color-secondary;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: $color-gray-20;
+    padding: 0 $padding-small;
+
+    &__spend {
+      color: $color-warning;
+    }
+    &__rest {
+      color: $color-success;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $color-white;
+    box-sizing: border-box;
+    padding: $padding-small;
+
+    &__row {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      justify-content: space-between;
+      border: 1px solid $color-purple-20;
+    }
+  }
+}
